@@ -1,0 +1,53 @@
+<%include ../partials/header%>
+
+<section class="video-section">
+<div class="video-container">
+  <video poster="" autoplay="true" loop="loop" muted="muted">
+    <source src="/media/sparkling_water.mp4" type="video/mp4">
+      Video not supported
+  </video>
+  <div class="text">
+    <h1>Eleva tu Entrenamiento de Tennis al siguiente nivel<br><br>
+      <a href="/register" class="boton-registrate">Registrate</a>
+    </h1>
+
+  </div>
+</div>
+</section>
+
+<nav id="menuprincipal">
+	<div>
+		<ul>
+			<li><a href="" class="boton1">Aprende a Entrenar</a></li>
+			<li><a href="" class="boton1">Certificate como Entrenador</a></li>
+			<li><a href="" class="boton1">Promocionate</a></li>
+		</ul>
+	</div>
+</nav>
+
+<section class="explora">
+<div>
+   <h1>Explora Cursos</h1>
+ </div>
+<div class="container">
+	<div class="row text-center" style="display:flex; flex-wrap: wrap;">
+	        <% cursos.forEach(function(curso){ %>
+	            <div class="col-md-6 col-sm-6">
+	                <div class="thumbnail">
+	                   <img src="<%= curso.image %>">
+	                   <div class="caption">
+	                       <h4><%= curso.title %></h4>
+	                       <p><%= curso.body %></p>
+	                   </div>
+	                   <p>
+	                   		<a href="/cursos/<%= curso._id %>" class="btn btn-primary">More Info</a>
+	                   </p>
+	                </div>
+	            </div>
+	        <% }); %>
+	</div>
+	   <a href="" class="pull-right" style="display: inline">Ver más</a>
+</div>
+</section>
+
+<%include ../partials/footer%>

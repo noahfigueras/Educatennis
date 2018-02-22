@@ -1,0 +1,43 @@
+<%include ../partials/header%>
+
+<div style="padding: 40px 40px">
+	<div class="row">
+	 	<div class = "col-md-5">
+		    <a href = "#" class = "thumbnail">
+		     	<img src = "<%=curso.image%>" alt = "Generic placeholder thumbnail">
+		    </a>
+   		</div>
+   		<div style="padding-left: 40px; height: 100%">
+   			<h1 style="margin-top: 0 "><%= curso.title %></h1>
+   			<button style="margin-top: 20px" type="button" class="btn btn-danger btn-lg">Última Lección</button>
+   			<div class="progress" style="margin-top: 40px">
+  				<div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: <%=currentUser.progresoBC%>%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">
+  				</div>
+			</div>
+			<span id="status"><%=currentUser.progresoBC%> %</span>
+   		</div>
+   	</div>
+</div>	
+<%console.log(currentUser.progresoBC)%>
+<ul class="secondary-navbar">
+	<li><a href="/cursos/<%=curso._id%>/enrolled">Contenido del curso</a></li>
+	<li><a href="/cursos/<%=curso._id%>/enrolled/foro">Foro</a></li>
+	<li><a href="/cursos/<%=curso._id%>/enrolled/announcements">Tablón de anuncios</a></li>
+</ul>
+
+<div class="container">
+	<h1>Contenido del Curso</h1>
+
+	<%curso.content.forEach(function(element) { %>
+	<button class="accordion"><%= element.title %></button>
+		<div class="accordion-content">
+		<%element.index.forEach(function(subindex) { %>
+			<div class="inside-accordion">
+				<a href="/cursos/<%=curso._id%>/enrolled/<%=subindex.ref%>"><%= subindex.subindex %></a>
+			</div>
+		<% }); %>
+		</div>
+	<% }); %>
+</div>
+
+<%include ../partials/footer%>

@@ -1,0 +1,31 @@
+<%include ../partials/header%>
+
+<div style="padding: 40px 40px">
+	<div class="row">
+	 	<div class = "col-md-5">
+		    <a href = "#" class = "thumbnail">
+		     	<img src = "<%=curso.image%>" alt = "Generic placeholder thumbnail">
+		    </a>
+   		</div>
+   		<div style="padding-left: 40px; height: 100%">
+   			<h1 style="margin-top: 0 "><%= curso.title %></h1>
+   			<button style="margin-top: 20px" type="button" class="btn btn-danger btn-lg">Última Lección</button>
+   			<div class="progress" style="margin-top: 40px">
+  				<div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">
+  				</div>
+			</div>
+   		</div>
+   	</div>
+</div>	
+
+<ul class="secondary-navbar">
+	<li><a href="/cursos/<%=curso._id%>/enrolled">Contenido del curso</a></li>
+	<li><a href="/cursos/<%=curso._id%>/enrolled/foro">Foro</a></li>
+	<li><a href="/cursos/<%=curso._id%>/enrolled/announcements">Tablón de anuncios</a></li>
+</ul>
+
+<div class="container">
+	<h1>Announcements</h1>
+</div>
+
+<%include ../partials/footer%>

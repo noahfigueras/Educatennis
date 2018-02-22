@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Plantilla Cursos</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+<body>
+<style type="text/css">
+	@import url('https://fonts.googleapis.com/css?family=Lato');
+	body{
+		margin: 0;
+		padding: 0;
+		font-family: 'Lato', sans-serif;
+	}
+	h1 {
+		text-align: center;
+		font-size: 3em;
+		margin-bottom: 40px
+	} 
+	.ejemplos{
+		margin-top: 20px;
+		margin-bottom: 30px;
+		display: flex;
+		height: 400px
+		align-items: center;
+	}
+	.video{
+		flex: 1;
+	} 
+	.explicacion{
+		flex: 1;
+		text-align: justify;
+		padding: 20px;
+		font-size: 1.5em
+	}
+
+</style>
+
+<div class="container">
+		<h1>Titulo del Curso</h1>
+	<hr>
+	<div class="container inside">
+		<div id="objetivo">
+			<p class="lead">
+				<strong>Objetivo:</strong>
+			</p>
+		</div>
+		<div id="profesor">
+			<p class="lead">
+				<strong>Función del profesor:</strong>
+			</p>
+		</div>
+		<div id="planificacion">
+			<p class="lead">
+				<strong>Planificación y desarrollo de la clase:</strong>
+			</p>	
+		</div>
+	</div>
+		<h2>Ejemplos</h2>
+
+		<section class="ejemplos">
+				<iframe class="video" width="420" height="315" src="//www.youtube.com/embed/9B7te184ZpQ?rel=0" frameborder="0" allowfullscreen>
+				</iframe>
+				<div class="explicacion">
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure fuga quibusdam, sit doloribus libero sapiente cupiditate dolor quia, exercitationem. Atque natus cum pariatur necessitatibus maiores quae error minima corrupti nam.
+					</p>
+				</div>
+		</section>
+		<section class="ejemplos">
+				<iframe class="video" width="420" height="315" src="https://www.youtube.com/watch?v=1IHuOFXoPLI" frameborder="0" allowfullscreen>
+				</iframe>
+				<div class="explicacion">
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure fuga quibusdam, sit doloribus libero sapiente cupiditate dolor quia, exercitationem. Atque natus cum pariatur necessitatibus maiores quae error minima corrupti nam.
+					</p>
+				</div>
+		</section>
+	
+</div>
+</body>
+</html>

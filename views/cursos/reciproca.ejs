@@ -1,0 +1,60 @@
+<%include ../partials/header%> 
+
+<a href="/cursos/<%=curso._id %>/enrolled/">Go Back</a>
+
+<div class="container">
+	<h1 style="text-align: center; font-size: 3em; margin-bottom: 40px">El metodo de la enseñanza recíproca</h1>
+
+	<hr>
+
+	<p class="lead"><strong>Objetivo:</strong> Repetición de los ejercicios a realizar bajo el mando del profesor y observado por un alumno que corrige y evalúa a sus compañero.</p>
+
+	<p class="lead"><strong>Función del profesor:</strong> Ya no es tan destacado, pues traslada a los alumnos algunas decisiones (ritmo, cadencia de ejecución de los ejercicios, ubicación en el terreno, evaluación…) Papel del alumno: Más Activo. Comienzan a tener cierta responsabilidad como decidir, evaluar, proporcionar Feedback.</p>
+
+	<p class="lead"><strong>Planificación y desarrollo de la clase:</strong> La planificación corresponde por entera al profesor (decisiones preactivas). Quien elabora la hoja de enseñanza recíproca y establece las secuencias de tareas con sus correspondientes aspectos a evaluar. Se deben elegir pocos puntos a observar, sólo los más significativos. Existen criterios de ejecución (correcto-incorrecto) La observación puede ser guiada por una hoja de tareas Se parte de una organización muy bien cuidada (parejas) y de una información inicial, de carácter general, pero muy clarificadora del proceso. Los alumnos se observan entre sí la realización de los ejercicios (uno ejecutante y otro observador y a la inversa) Puede atender a las diferencias individuales de los alumnos (realizar el ejercicio según su ritmo o nivel) sin que esto suponga individualiza, pues sigue siendo el mismo trabajo para todos.</p>
+
+	
+	<p class="lead">Videos 1, 2 y 3 "Enseñanza y practica de la Volea y remate" : Los jugadores se distribuyen como muestran las imagenes. El lanzador de la pelota es el que realiza las funciones de profesor y focaliza su atención en las indicaciones que anteriormente ha dado el profesor. El jugador que golpea de volea (debe de dirigir la pelota hacia las manos de su compañero) realiza la función de alumno y debe de atender a las indicaciones y correcciones de su compañero.</p>
+
+	<div class=row>
+		<div class="col-md-4 col-sm-6">
+			<img id="myBtn" src="/media/proyectos/rafa-saque2.jpg" class="img-thumbnail">
+			<div class="carousel-caption center-block">
+			<img id="myHover" src="/media/play-button.png">
+			</div>
+			<div id="myModal" class="modal">
+				<div class="modal-content">
+					<span class="close">&times;</span>
+					<div class="embed-responsive embed-responsive-16by9">
+		    			<iframe id="myVideo" class="embed-responsive-item" src="//www.youtube.com/embed/ePbKGoIGAXY"></iframe>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<p class="lead">En los casos prácticos que aparecen en los videos 1 y 2 el profesor ha indicado anteriormente que se trabaje la preparación y terminación de la volea, enfatizando en que deben de ser preparaciones y terminaciones recortadas, por lo que el jugador-entrenador ha de estar atento sobre las correcciones a realizar.</p>
+
+	<p class="lead">En el Vídeo 3º el jugador-entrenador enfatiza sobre las correcciones de la muñeca en el remate (impacto hacia abajo).</p>
+
+	<p class="lead">Vídeo 4 "Enseñanza y practica del servicio": El jugador que realiza servicios debe de atender a las indicaciones y correcciones de su compañero. En este caso práctico, el profesor indica que en el momento del impacto, el jugador ponga atención en pasar al mismo tiempo la pierna y el brazo (el de golpeo) derecho.</p>
+
+	<p class="lead">Videos 5, 6 y 7 "Enseñanza y practica de la derecha y el revés": Los jugadores se distribuyen como muestran las imagenes. El lanzador de la pelota (la tiene que introducir en el aro) es el que realiza las funciones de profesor y focaliza su atención en las indicaciones que anteriormente ha dado el profesor.</p>
+
+	<p class="lead">En los casos prácticos que aparecen en estos videos el profesor indicó que se trabajase el impacto y posterior acompañamiento de la pelota, enfatizando en que dirijan la pelota hacia las manos del jugador-entrenador.</p>
+
+	<p class="lead">Variantes a realizar en todas las propuestas: A la pareja se le puede añadir un tercer compañero que realice tareas de apuntador, la ficha del apuntador será diseñada por el profesor. Las funciones del apuntador serán las de anotar tanto si las indicacciones del jugador-profesor o las acciones del jugador son acertadas. También se pueden confeccionar grupos de cuatro alumnos, un lanzador (jugador-profesor), dos jugadores golpeando (separados entre si) y un apuntador, los cuatro van rotando sus posiciones alternativamente.</p>
+
+
+	
+	<div style="text-align: center; padding-bottom: 40px;">
+        <a class="buttons" href="/cursos/<%=curso._id%>/enrolled/<%=anterior%>">
+        	<button type="button" class="btn btn-primary btn-lg buttons"><< Anterior Lección</button>
+        </a>
+        <a class="buttons" href="/cursos/<%=curso._id%>/enrolled/<%=siguiente%>">
+        	<button type="button" class="btn btn-primary btn-lg">Siguiente Lección >></button>
+        </a>
+    </div>
+</div>
+
+<script src="/javascript/animations.js"></script>

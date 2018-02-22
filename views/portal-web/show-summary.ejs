@@ -1,0 +1,64 @@
+<%include ../partials/header%>
+
+<div style="padding: 40px 40px; background-color: rgb(31, 38, 50); color: white">
+	<div class="row">
+	 	<div class = "col-md-5">
+		    <a href = "#" class = "thumbnail">
+		     	<img src = "<%=curso.image%>" alt = "Generic placeholder thumbnail">
+		    </a>
+   		</div>
+   		<div style="padding-left: 40px; height: 100%">
+   			<h1 style="margin-top: 0 "><%= curso.title %></h1>
+   			<form action="/cursos/<%= curso._id %>/add" method="POST">
+   				<button style="margin-top: 20px" class="btn btn-danger btn-lg">Comprar</button>
+   			</form>
+   			<p style="margin-top: 40px"class="lead"><%= curso.body%></p>
+   		</div>
+   	</div>
+</div>
+  
+<div class="container">
+	<h1>Que voy a aprender?</h1>
+  		<div style="background-color: whitesmoke" class="row">
+    		<div class="col-md-6">
+      			<ul>
+      				<li><h3>fdsadfsadfsafdsa</h3></li>
+      				<li><h3>fdsadfsadfsafdsa</h3></li>
+      				<li><h3>fdsadfsadfsafdsa</h3></li>
+      				<li><h3>fdsadfsadfsafdsa</h3></li>
+      			</ul>
+    		</div>
+    		<div class="col-md-6">
+     			<ul>
+      				<li><h3>fdsadfsadfsafdsa</h3></li>
+      				<li><h3>fdsadfsadfsafdsa</h3></li>
+      				<li><h3>fdsadfsadfsafdsa</h3></li>
+      				<li><h3>fdsadfsadfsafdsa</h3></li>
+      			</ul>
+    		</div>
+    	</div>
+</div>
+
+<div class="container">
+	<h1>Descripción</h1>
+	<p class="lead">"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
+	</p>
+</div>
+
+<div class="container">
+	<h1>Indice del Curso</h1>
+
+	<%curso.content.forEach(function(element) { %>
+	<button class="accordion"><%= element.title %></button>
+		<div class="accordion-content">
+		<%element.index.forEach(function(subindex) { %>
+			<div class="inside-accordion">
+				<a href=""><%= subindex.subindex.toUpperCase() %></a>
+			</div>
+		<% }); %>
+		</div>
+	<% }); %>
+</div>
+
+
+<%include ../partials/footer%>

@@ -1,0 +1,41 @@
+<%include ../partials/header%>
+
+<div class="jumbotron jumbotron-fluid" style=" color: white; background-image: url(/media/proyectos/large-banner-tennis-1.jpg); background-size: cover;">
+	<div class="container">
+	    <h1 class="display-3">Educatennis</h1>
+	    <p class="lead">Conviertete en el mejor entrenador.</p>
+  	</div>
+</div>
+
+<div class="container">
+	<div class="row text-center" style="display:flex; flex-wrap: wrap;">
+	        <% cursos.forEach(function(curso){ %>
+	            <div class="col-md-3 col-sm-6">
+	                <div class="thumbnail">
+	                   <img src="<%= curso.image %>">
+	                   <div class="caption">
+	                       <h4><%= curso.title %></h4>
+	                       <p><%= curso.body %></p>
+	                   </div>
+	                   <p>
+	                   <% if(!currentUser){%>
+	                   		<a href="/cursos/<%= curso._id %>" class="btn btn-primary">More Info</a>	
+	                   <%}else if(currentUser.cursos == ""){%>
+	                   		<a href="/cursos/<%= curso._id %>" class="btn btn-primary">More Info</a>	
+	                   <%}else {%>
+	                   		<%currentUser.cursos.find(function(encontrado){%>
+	                   			<%if(encontrado = curso._id){%>
+	                   				<a href="/cursos/<%= curso._id %>" class="btn btn-primary">Go to Class</a>
+	                   			<%}%>
+	                   		<%})%>
+	                   <%}%>
+
+
+	                   </p>
+	                </div>
+	            </div>
+	        <% }); %>
+	</div>
+</div>
+
+<%include ../partials/footer%>

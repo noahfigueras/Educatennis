@@ -1,0 +1,39 @@
+<%include ../partials/header%>
+<div class= "container" >
+	<div class="container" style="border: 1px solid grey; text-align: center; padding: 20px; margin-top: 40px;">
+		<img src="<%= user.avatar%>" alt="Cinque Terre" width="128px" height="128px" style="border-radius: 50%; border: 2px black solid">
+		<h1 style="font: 1.5em bold 600; text-transform: lowercase"><%=user.firstName + " " + user.lastName%></h1>		
+	</div>
+	<div class="container" style="border: 1px solid grey; margin-top: 40px;">
+		<h1>Autobiografía</h1>
+		<hr>
+		<p class="lead">
+			Mi nombre és Genis y soy entrenador de Tennis desde hace 19 años. He entrenado a jugadores profesionales que están jugando en la ATP y otros jugadores semi-profesionales. Soy un entrenador certificado por educatennis y doy clases en la localidad de Sant Cugat del Vallés en las pistas de Catalana Occidente todos los Miércoles, Jueves y Sábados por la mañana.
+		</p>
+	</div>
+
+	<div class="container" style="border: 1px solid grey; margin-top: 40px;">
+		<h1>Certificado Educatennis</h1>
+		<hr>
+		<div class="row text-center" style="display:flex; flex-wrap: wrap;">
+		        <% cursos.forEach(function(curso){ %>
+		        	<%user.cursos.find(function(encontrado){%>
+	           			<%if(encontrado = curso._id){%>
+	           			<div class="col-md-6 col-sm-6">
+	        				<div class="thumbnail">
+		           				<img src="<%= curso.image %>">
+		           				<div class="caption">
+		               				<h4><%= curso.title %></h4>
+		               				<p><%= curso.body %></p>
+		           				</div>
+		           				<p>
+		           				<a href="/cursos/<%= curso._id %>/enrolled" class="btn btn-primary">Go to Class</a>
+		           				</p>
+	           				</div>
+	           			</div>		
+	           			<%}%>
+		            <%})%>
+		        <%})%>    
+		</div>
+	</div>
+</div>
